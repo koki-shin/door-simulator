@@ -3,16 +3,13 @@ In this package, a door mechanism (including a door hinge, handle, and latch) is
 
 ## Updates
 
-## Getting Started
-
-### Requirement
+## Requirement
 * Ubuntu 20.04
 * ROS 1 Noetic
 * Python 3.8
 * Gazebo 11 Simulator
 
-
-### Build and Launch
+## Build and Launch
 
 1. Clone and initialize project with a catkin workspace
 ```sh
