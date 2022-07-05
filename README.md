@@ -3,27 +3,27 @@ Using ROS and Gazebo, door mechanisms are simulated (including the door hinge, h
 
 ## Structure
 ```
-door-simulator                     # Door Simulator Project
-├── door                           # door package
-│   ├── config                     # config folder
-│   │   ├── config.yaml
-│   │   ├── joint_names_complete_door_1.yaml
-│   │   ├── rviz.rviz
-│   ├── launch                     # launch folder for launch files
-│   │   ├── control.launch
-│   │   ├── display.launch
-│   │   ├── gazebo.launch
-│   ├── meshes                     # meshes folder for stl files
-│   │   ├── door.stl
-│   │   ├── frame.stl
-│   │   ├── handle.stl
-│   │   ├── latch.stl
-│   ├── urdf                       # urdf folder urdf files
-│   │   ├── door_fixed.gv
-│   │   ├── door_fixed.pdf
-│   │   ├── door_fixed.urdf
-│   ├── CMakeLists.txt             # compiler instructions
-│   ├── package.xml                # package info
+door-simulator                 # Door Simulator Project
+├── door                       # door package
+├── config                     # config folder
+    ├── config.yaml
+    ├── joint_names_complete_door_1.yaml
+    ├── rviz.rviz
+├── launch                     # launch folder for launch files
+    ├── control.launch
+    ├── display.launch
+    ├── gazebo.launch
+├── meshes                     # meshes folder for stl files
+    ├── door.stl
+    ├── frame.stl
+    ├── handle.stl
+    ├── latch.stl
+├── urdf                       # urdf folder urdf files
+    ├── door_fixed.gv
+    ├── door_fixed.pdf
+    ├── door_fixed.urdf        # urdf description of the door model
+├── CMakeLists.txt             # compiler instructions
+├── package.xml                # package info
 └──
 ```
 
