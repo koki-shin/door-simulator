@@ -1,5 +1,5 @@
 # door-simulator
-In this package, a door mechanism (including a door hinge, handle, and latch) is simulated in Gazebo. In addition, the door knob dataset can be used to swap the default handle with a desired configuration.
+Use ROS and Gazebo to simulate door mechanisms, including the door hinge, handle, and latch. In addition, the door knob dataset can be used to swap the default handle with a desired configuration.
 
 ## Requirement
 * Ubuntu 20.04
