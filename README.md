@@ -13,12 +13,12 @@ door-simulator                     # Door Simulator Project
 │   │   ├── control.launch
 │   │   ├── display.launch
 │   │   ├── gazebo.launch
-│   ├── meshes                     # meshes folder for door components
+│   ├── meshes                     # meshes folder for stl files
 │   │   ├── door.stl
 │   │   ├── frame.stl
 │   │   ├── handle.stl
 │   │   ├── latch.stl
-│   ├── urdf                       # urdf folder
+│   ├── urdf                       # urdf folder urdf files
 │   │   ├── door_fixed.gv
 │   │   ├── door_fixed.pdf
 │   │   ├── door_fixed.urdf
