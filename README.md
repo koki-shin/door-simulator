@@ -61,7 +61,7 @@ $ roslaunch control.launch
 ## Contact
 Koki Shin - kokishin@tamu.edu
 
-Project Link: https://github.com/koki-shin/door-knob-dataset
+Project Link: https://github.com/koki-shin/door-simulator
 
 ## Acknowledgments
 Reference Model: https://grabcad.com/library/door-2000x700x40mm-1
