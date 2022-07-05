@@ -23,8 +23,7 @@ door-simulator                 # Door Simulator Project
     ├── door_fixed.pdf
     ├── door_fixed.urdf        # urdf description of the door model
 ├── CMakeLists.txt             # compiler instructions
-├── package.xml                # package info
-└──
+└── package.xml                # package info
 ```
 
 ## Requirement
