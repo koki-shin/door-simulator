@@ -37,22 +37,21 @@ door-simulator                 # Door Simulator Project
 
 1. Clone and initialize project with a catkin workspace
 ```sh
-$ mkdir catkin_ws && cd catkin_ws
+$ mkdir -p catkin_ws/src && cd ~/catkin_ws/src
 $ git clone https://github.com/koki-shin/door-simulator.git
-$ mv RoboND-Go-Chase-It src
-$ cd src && catkin_init_workspace
+$ catkin_init_workspace
 ```
 
 2. Move back to `catkin_ws\` and build
 ```
-$ cd ..
+$ cd ~/catkin_ws 
 $ catkin_make
 ```
 
 3. To spawn the controllers and the model in gazebo:
 ```
 $ source devel/setup.bash
-$ roslaunch control.launch
+$ roslaunch door_fixed control.launch
 ```
 
 ## Usage
