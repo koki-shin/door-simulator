@@ -5,22 +5,34 @@ In this package, a door mechanism (including a door hinge, handle, and latch) is
 
 ## Getting Started
 
-### Prerequisites
+### Requirement
 * Ubuntu 20.04
 * ROS 1 Noetic
 * Python 3.8
 * Gazebo 11 Simulator
 
 
-### Installation
+### Build and Launch
 
-Clone the repository
+Clone and initialize project with a catkin workspace
 ```sh
-cd catkin_ws/src
-git clone https://github.com/koki-shin/door-knob-dataset.git
+$ mkdir catkin_ws && cd catkin_ws
+$ git clone https://github.com/koki-shin/door-simulator.git
+$ mv RoboND-Go-Chase-It src
+$ cd src && catkin_init_workspace
 ```
 
-## 1. 
+2. Move back to `catkin_ws\` and build
+```
+$ cd ..
+$ catkin_make
+```
+
+3. Launch the world
+```
+$ source devel/setup.bash
+$ roslaunch control.launch
+```
 
 ## Usage
 
