@@ -18,7 +18,7 @@ door-simulator                     # Door Simulator Project
 │   │   ├── frame.stl
 │   │   ├── handle.stl
 │   │   ├── latch.stl
-│   ├── urdf                       # urdf folder for xarco files
+│   ├── urdf                       # urdf folder
 │   │   ├── door_fixed.gv
 │   │   ├── door_fixed.pdf
 │   │   ├── door_fixed.urdf
