@@ -14,7 +14,7 @@ In this package, a door mechanism (including a door hinge, handle, and latch) is
 
 ### Build and Launch
 
-Clone and initialize project with a catkin workspace
+1. Clone and initialize project with a catkin workspace
 ```sh
 $ mkdir catkin_ws && cd catkin_ws
 $ git clone https://github.com/koki-shin/door-simulator.git
