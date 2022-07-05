@@ -1,0 +1,14 @@
+door_fixed:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  hinge_controller:
+    type: "position_controllers/JointTrajectoryController"
+    joints:
+      - hinge_joint
+
+  handle_controller:
+    type: "position_controllers/JointTrajectoryController"
+    joints:
+      - handle_joint

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="door_fixed">
+  <link name="world"/>
+  
+  <joint name="world_to_frame" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="frame"/>
+  </joint>
+
+  <link name="frame">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://door_fixed/meshes/frame.stl"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://door_fixed/meshes/frame.stl"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <origin xyz=".3 0 1" rpy="0 0 0"/>
+      <mass value="1"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+
+  <joint name="hinge_joint" type="revolute">
+    <origin xyz="0.07850 -0.00673 0.23370" rpy="0 0 0"/>
+    <parent link="frame"/>
+    <child link="door"/>
+    <axis xyz="0 0 1"/>
+    <limit velocity="10" effort="100" lower="-1" upper="1"/>
+    <dynamics damping="0.7"/>
+  </joint>
+
+  <link name="door">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://door_fixed/meshes/door.stl"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://door_fixed/meshes/door.stl"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <origin xyz=".3 0 1" rpy="0 0 0"/>
+      <mass value="10"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+
+  <joint name="handle_joint" type="revolute">
+    <origin xyz="0.64207 0.00673 0.77630" rpy="0 0 0"/>
+    <parent link="door"/>
+    <child link="handle"/>
+    <axis xyz="0 -1 0"/>
+    <limit velocity="10" effort="100" lower="0" upper="1.15"/>
+    <dynamics damping="0.7"/>
+  </joint>
+
+  <link name="handle">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://door_fixed/meshes/handle.stl"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://door_fixed/meshes/handle.stl"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value=".5"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+  
+  <joint name="latch_joint" type="prismatic">
+    <origin xyz="0.69829 0.02101 0.78344" rpy="0 0 0"/>
+    <parent link="door"/>
+    <child link="latch"/>
+    <axis xyz="-1 0 0"/>
+    <limit velocity="10" effort="100" lower="-1" upper="1"/>
+    <dynamics damping="0.7"/>
+    <mimic joint="handle_joint" multiplier="0.01" offset="0.002"/>
+  </joint>
+
+  <link name="latch">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://door_fixed/meshes/latch.stl"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://door_fixed/meshes/latch.stl"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value=".1"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/door_fixed</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    </plugin>
+  </gazebo>
+
+  <transmission name="tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="hinge_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="handle_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor2">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <gazebo>
+    <!-- loading plugin: mimic joints works in gazebo now -->
+    <plugin name="gazebo_latch_ros_control" filename="libroboticsgroup_upatras_gazebo_mimic_joint_plugin.so">
+      <robotNamespace>/door_fixed</robotNamespace>
+      <joint>handle_joint</joint>
+      <mimicJoint>latch_joint</mimicJoint>
+      <multiplier>0.01</multiplier>
+      <offset>0.002</offset>
+    </plugin>
+  </gazebo>
+
+</robot>
