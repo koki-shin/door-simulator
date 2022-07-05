@@ -10,6 +10,6 @@
 
 ## Contact
 Koki Shin - kokishin@tamu.edu
-Project Link: 
+Project Link: https://github.com/koki-shin/door-knob-dataset
 
 ## Acknowledgments
