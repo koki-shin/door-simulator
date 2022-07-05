@@ -49,7 +49,7 @@ $ cd ..
 $ catkin_make
 ```
 
-3. Launch the world
+3. To spawn the controllers and the model in gazebo:
 ```
 $ source devel/setup.bash
 $ roslaunch control.launch
