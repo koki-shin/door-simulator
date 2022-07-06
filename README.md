@@ -1,7 +1,7 @@
 # door-simulator
 
 <p align="center">
-  ![alt text](door-opening.gif)
+  ![](door-opening.gif)
 </p>
 
 ## Summary
