@@ -1,6 +1,11 @@
 # door-simulator
 
   ![](door-opening.gif)
+  
+  <p align="center">
+  <img width="345" height="304" src="./door-opening.gif">
+  <img width="345" height="304" src="./door-opening.gif">
+</p>
 
 ## Summary
 Using ROS and Gazebo, door mechanisms are simulated (including the door hinge, handle, and latch). In addition, the door knob dataset can be used to swap the default handle with a desired configuration.
