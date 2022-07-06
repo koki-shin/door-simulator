@@ -2,8 +2,10 @@
 
   ![](door-opening.gif)
   
-  ![](https://github.com/koki-shin/door-simulator/blob/main/imgs/door-opening.gif)
-  ![](https://github.com/koki-shin/door-simulator/blob/main/imgs/handle-turning.gif)
+  <p align="center">
+  <img width="500" height="340" src="https://github.com/koki-shin/door-simulator/blob/main/imgs/door-opening.gif">
+  <img width="500" height="340" src="https://github.com/koki-shin/door-simulator/blob/main/imgs/handle-turning.gif">
+  </p>
 
 ## Summary
 Using ROS and Gazebo, door mechanisms are simulated (including the door hinge, handle, and latch). In addition, the door knob dataset can be used to swap the default handle with a desired configuration.
