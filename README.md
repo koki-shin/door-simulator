@@ -3,8 +3,8 @@
   ![](door-opening.gif)
   
   <p align="center">
-  <img width="345" height="304" src="./door-opening.gif">
-  <img width="345" height="304" src="./door-opening.gif">
+  <![](https://github.com/koki-shin/door-simulator/blob/main/imgs/door-opening.gif)>
+  <![](https://github.com/koki-shin/door-simulator/blob/main/imgs/handle-turning.gif)>
 </p>
 
 ## Summary
