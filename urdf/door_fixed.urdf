@@ -10,16 +10,16 @@
 
   <link name="frame">
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="1.571 0 0"/>
       <geometry>
-        <mesh filename="package://door_fixed/meshes/frame.stl"/>
+        <mesh filename="package://door_fixed/meshes/frame(byKevin).stl"/>
       </geometry>
     </visual>
 
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="1.571 0 0"/>
       <geometry>
-        <mesh filename="package://door_fixed/meshes/frame.stl"/>
+        <mesh filename="package://door_fixed/meshes/frame(byKevin).stl"/>
       </geometry>
     </collision>
 
