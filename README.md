@@ -1,6 +1,6 @@
 # door-simulator
 
-[door-opening]: /door-opening.gif
+[door-opening]: ./door-opening.gif
 
 <p align="center">
   ![alt text][door-opening]
