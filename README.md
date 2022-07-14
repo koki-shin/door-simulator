@@ -65,6 +65,7 @@ $ catkin_make
 ```
 $ source devel/setup.bash
 $ roslaunch door_fixed door.launch --ros-args
+$ roslaunch door_fixed door.launch door_type:=pull
 ```
 
 ## Usage
