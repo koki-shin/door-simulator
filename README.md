@@ -3,8 +3,13 @@
   ![](door-opening.gif)
   
   <p align="center">
-  <img width="500" height="340" src="https://github.com/koki-shin/door-simulator/blob/main/imgs/door-opening.gif">
-  <img width="500" height="340" src="https://github.com/koki-shin/door-simulator/blob/main/imgs/handle-turning.gif">
+  <img width="400" height="250" src="https://github.com/koki-shin/door-simulator/blob/main/imgs/door-opening.gif">
+  <img width="400" height="250" src="https://github.com/koki-shin/door-simulator/blob/main/imgs/handle-turning.gif">
+  </p>
+  
+  <p align="center">
+  <img width="400" height="250" src="https://github.com/koki-shin/door-simulator/blob/main/imgs/transparent-door-opening.gif">
+  <img width="400" height="250" src="https://github.com/koki-shin/door-simulator/blob/main/imgs/transparent-handle-turning.gif">
   </p>
 
 ## Summary
@@ -59,7 +64,8 @@ $ catkin_make
 3. To spawn the controllers and the model in gazebo:
 ```
 $ source devel/setup.bash
-$ roslaunch door_fixed control.launch
+$ roslaunch door_fixed door.launch --ros-args
+$ roslaunch door_fixed door.launch door_type:=pull
 ```
 
 ## Usage
