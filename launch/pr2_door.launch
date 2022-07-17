@@ -1,0 +1,19 @@
+<launch>
+  <arg name="door_type" default="handle" doc="handle, pull, pr2"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" value="false"/>
+    <arg name="world_name" value="$(find door_fixed)/worlds/door.world"/>
+  </include>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find door_fixed)/config/config.yaml" command="load"/>
+
+  <param
+    name="robot_description"
+    textfile="$(find door_fixed)/urdf/pr2_door.urdf" />
+
+  <node name="spawn_robot" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+      args="-urdf -model pr2_door -param robot_description"/>
+
+</launch>

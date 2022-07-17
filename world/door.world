@@ -1,0 +1,33 @@
+<sdf version="1.4">
+  <world name="door">
+    <gravity>0 0 -9.8</gravity>
+    <physics type="dart">
+      <real_time_update_rate>1000.0</real_time_update_rate>
+      <max_contacts>20</max_contacts>
+      <simbody>
+        <accuracy>0.001</accuracy>
+        <min_step_size>0.0001</min_step_size>
+        <contact>
+          <dissipation>100.0</dissipation>
+          <viscous_friction>0.9</viscous_friction>
+          <override_impact_capture_velocity>0.001</override_impact_capture_velocity>
+          <override_stiction_transition_velocity>0.001</override_stiction_transition_velocity>
+          <stiffness>100000000.0</stiffness>
+          <plastic_coef_restitution>0.5</plastic_coef_restitution>
+          <dynamic_friction>0.9</dynamic_friction>
+          <static_friction>0.9</static_friction>
+          <plastic_impact_velocity>0.5</plastic_impact_velocity>
+        </contact>
+        <max_transient_velocity>0.01</max_transient_velocity>
+      </simbody>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+  </world>
+</sdf>
