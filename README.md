@@ -20,19 +20,25 @@ Using ROS and Gazebo, door mechanisms are simulated (including the door hinge, h
 door-simulator                 # Door Simulator Project
 ├── door                       # door package
 ├── config                     # config folder
-    ├── config.yaml
-    ├── joint_names_complete_door_1.yaml
-    ├── rviz.rviz
+    ├── controller.yaml
 ├── launch                     # launch folder for launch files
     ├── door.launch
+    ├── door_with_controller.launch
 ├── meshes                     # meshes folder for stl files
     ├── door.stl
     ├── frame.stl
+    ├── frame_16x22.stl
+    ├── frame_17x22.stl
+    ├── frame_18x22.stl
+    ├── frame-kevin.stl
     ├── handle.stl
     ├── latch.stl
+    ├── pull_handle1.stl
 ├── urdf                       # urdf folder urdf files
     ├── handle_door.urdf       # urdf description of the handle door model
+    ├── handle_door_actuated.urdf
     ├── pull_door.urdf         # urdf description of the pull door model
+    ├── pull_door_actuated.urdf  
 ├── world
 ├── CMakeLists.txt             # compiler instructions
 └── package.xml                # package info
