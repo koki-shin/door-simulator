@@ -3,12 +3,12 @@
   ![](door-opening.gif)
   
   <p align="center">
-  <img width="400" height="250" src="https://github.com/koki-shin/door-simulator/blob/main/imgs/door-opening.gif">
-  <img width="400" height="250" src="https://github.com/koki-shin/door-simulator/blob/main/imgs/handle-turning.gif">
+  <img width="400" height="250" src="https://github.com/koki-shin/door-simulator/blob/main/imgs/handledoor_closingfaster.gif">
+  <img width="400" height="250" src="https://github.com/koki-shin/door-simulator/blob/main/imgs/handledoor_latch.gif">
   </p>
   
   <p align="center">
-  <img width="400" height="250" src="https://github.com/koki-shin/door-simulator/blob/main/imgs/transparent-door-opening.gif">
+  <img width="400" height="250" src="https://github.com/koki-shin/door-simulator/blob/main/imgs/pulldoor_closing.gif">
   <img width="400" height="250" src="https://github.com/koki-shin/door-simulator/blob/main/imgs/transparent-handle-turning.gif">
   </p>
 
