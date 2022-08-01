@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 
-project(door_fixed)
+project(door_simulator)
 
 find_package(catkin REQUIRED)
 

@@ -1,38 +1,22 @@
 <launch>
   <arg name="door_type" default="handle" doc="handle, pull"/>
+  <arg name="gui" default="true"/>
+  <arg name="verbose" default="false"/>
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="paused" value="false"/>
-    <arg name="world_name" value="$(find door_fixed)/worlds/door.world"/>
-  </include>y
+    <arg name="paused" value="true"/>
+    <arg name="world_name" value="$(find door_simulator)/world/door.world"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="verbose" value="$(arg verbose)"/>
+  </include>
 
   <!-- Load joint controller configurations from YAML file to parameter server -->
-  <rosparam file="$(find door_fixed)/config/config.yaml" command="load"/>
+  <rosparam file="$(find door_simulator)/config/controller.yaml" command="load"/>
 
-  <param
-    name="robot_description"
-    textfile="$(find door_fixed)/urdf/$(arg door_type)_door.urdf" />
+  <param name="robot_description"
+    textfile="$(find door_simulator)/urdf/$(arg door_type)_door.urdf" />
 
   <node name="spawn_robot" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-      args="-urdf -model door_fixed -param robot_description -z 0.0 -J hinge_joint -0.5"/>
-
-  <!-- load the controllers -->
-  <node name="controller_spawner_handle" pkg="controller_manager" type="spawner" respawn="false"
-    output="screen" ns="/door_fixed" args="hinge_controller
-                                           joint_state_controller"/>
-
-  <!-- pull door does not need handle controller -->
-  <node name="controller_spawner_hinge" pkg="controller_manager" type="spawner" respawn="false"
-    output="screen" ns="/door_fixed" args="handle_controller" unless="$(eval arg('door_type') == 'pull')"/>                         
-
-  <!-- convert joint states to TF transforms for rviz, etc -->
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
-    respawn="false" output="screen">
-    <remap from="/joint_states" to="/door_fixed/joint_states" />
-  </node>
-
-  <node name="controller_gui" pkg="rqt_joint_trajectory_controller" type="rqt_joint_trajectory_controller"
-   respawn="false" output="screen"/>
-
+      args="-urdf -model door_simulator -param robot_description -z 0.0 -J hinge_joint -1.5"/>
 
 </launch>

@@ -4,7 +4,7 @@
     <physics type="dart">
       <real_time_update_rate>1000.0</real_time_update_rate>
       <max_contacts>20</max_contacts>
-      <simbody>
+      <dart>
         <accuracy>0.001</accuracy>
         <min_step_size>0.0001</min_step_size>
         <contact>
@@ -19,7 +19,7 @@
           <plastic_impact_velocity>0.5</plastic_impact_velocity>
         </contact>
         <max_transient_velocity>0.01</max_transient_velocity>
-      </simbody>
+      </dart>
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1.0</real_time_factor>
     </physics>

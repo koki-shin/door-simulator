@@ -78,3 +78,10 @@ Project Link: https://github.com/koki-shin/door-simulator
 
 ## References
 Reference Model: https://grabcad.com/library/door-2000x700x40mm-1
+
+```
+roslaunch door_simulator door.launch door_type:=handle gui:=true
+roslaunch door_simulator door.launch door_type:=pull gui:=true
+roslaunch door_simulator door_with_controller.launch door_type:=handle 
+roslaunch door_simulator door_with_controller.launch door_type:=pull 
+```
