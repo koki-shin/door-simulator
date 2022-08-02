@@ -69,12 +69,12 @@ $ catkin_make
 ```
 $ source devel/setup.bash
 $ roslaunch door_simulator door.launch --ros-args
-roslaunch door_simulator door.launch door_type:=handle gui:=true
+$ roslaunch door_simulator door.launch door_type:=handle gui:=true
 ```
 ```
-roslaunch door_simulator door.launch door_type:=pull gui:=true
-roslaunch door_simulator door_with_controller.launch door_type:=handle 
-roslaunch door_simulator door_with_controller.launch door_type:=pull 
+$ roslaunch door_simulator door.launch door_type:=pull gui:=true
+$ roslaunch door_simulator door_with_controller.launch door_type:=handle 
+$ roslaunch door_simulator door_with_controller.launch door_type:=pull 
 ```
 
 ## Usage
