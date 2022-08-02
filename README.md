@@ -68,11 +68,10 @@ $ catkin_make
 3. To spawn the controllers and the model in gazebo:
 ```
 $ source devel/setup.bash
-$ roslaunch door_fixed door.launch --ros-args
-$ roslaunch door_fixed door.launch door_type:=pull
-```
-```
+$ roslaunch door_simulator door.launch --ros-args
 roslaunch door_simulator door.launch door_type:=handle gui:=true
+```
+```
 roslaunch door_simulator door.launch door_type:=pull gui:=true
 roslaunch door_simulator door_with_controller.launch door_type:=handle 
 roslaunch door_simulator door_with_controller.launch door_type:=pull 
